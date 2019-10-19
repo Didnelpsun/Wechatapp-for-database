@@ -1,0 +1,28 @@
+view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  width: 100vw;
+  height: 100vh;
+}
+.body{
+  height: 87vh;
+  width: 100vw;
+  color:black;
+}
+.button{
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+button{
+  height: 5vh;
+  width: 25vw;
+  font-size: 3vw;
+  background-color: green;
+  color: white;
+}

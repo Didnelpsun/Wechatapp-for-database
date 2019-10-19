@@ -1,0 +1,48 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">请根据书本231页的ER图将虚线以下的图向关系模型转换</text>
+    <view class="test">
+      <movable-area>
+        <movable-view class="obj" x="0" y="{{clientHeight/4}}">订货
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/2.5}}">支付
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/20*11}}">库存
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t9">
+          应付账款
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t8">
+         库存量
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t7">
+          仓库号
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t6">
+          零件号
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t5">
+          产品名
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t4">
+          折扣规则
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t3">
+          订单号
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t2">
+          顾客
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t1">
+          顾客
+        </movable-view>
+      </movable-area>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">返回</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

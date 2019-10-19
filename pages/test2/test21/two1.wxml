@@ -1,0 +1,42 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">请使用SQL语言完成下列要求。请大写SQL语句\n</text>
+    <view class="test">
+    <view class="hspace"></view>
+      <input maxlength="40" type="text" style="border:0.5px solid #c5b102; width:90vw;" bindblur="inputCheck" id="1"></input>
+      <text>为用户KING创建一个模式STUDENT</text>
+      <text wx:if="{{statu}}" style="color:#c5b102">答案：CREATE SCHEMA STUDENT AUTHORIZATION KING</text>
+      <view class="hspace"></view>
+      <input maxlength="30" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="2"></input>
+      <text>在模式中同时建一个表Student</text>
+      <text wx:if="{{statu}}" style="color:#c5b102">答案：CREATE TABLE Student</text>
+      <view class="hspace"></view>
+      <input maxlength="30" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="3"></input>
+      <text>定义学号Sno为主键，类型为长度为10的定长字符串</text>
+      <text wx:if="{{statu}}" style="color:#c5b102">答案：(Sno CHAR(10) PRIMARY KEY,</text>
+      <view class="hspace"></view>
+      <input maxlength="35" type="text" style="border:0.5px solid #c5b102; width:60vw;" bindblur="inputCheck" id="4"></input>
+      <text>加上非空的Sname属性，类型为最大长度为4的变长字符串</text>
+      <text wx:if="{{statu}}" style="color:#c5b102">答案：Sname VARCHAR(4) NOT NULL,</text>
+      <view class="hspace"></view>
+      <input maxlength="45" type="text" style="border:0.5px solid #c5b102; width:85vw;" bindblur="inputCheck" id="5"></input>
+      <text>从被参照表Teacher的Tna列引入外码Tname，表示班主任名字，表定义结束</text>
+      <text wx:if="{{statu}}" style="color:#c5b102">答案：FOREIGN KEY(Tname) REFERENCES Teacher(Tna));</text>
+      <view class="hspace"></view>
+      <input maxlength="45" type="text" style="border:0.5px solid #c5b102; width:85vw;" bindblur="inputCheck" id="6"></input>
+      <text>增加主键必唯一的约束条件</text>
+      <text wx:if="{{statu}}" style="color:#c5b102">答案：ALTER TABLE Student ADD UNIQUE(Sno);</text>
+      <view class="hspace"></view>
+      <input maxlength="40" type="text" style="border:0.5px solid #c5b102; width:65vw;" bindblur="inputCheck" id="7"></input>
+      <text>删除模式STUDENT(并删除其下面所有数据。)</text>
+      <text wx:if="{{statu}}" style="color:#c5b102">答案：DROP SCHEMA STUDENT CASCADE;</text>
+    </view>
+  </view>
+  <view style="height:5vh;"></view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">返回</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; width:96vw; height:9vh">下面是三个一范式的关系模型，请点击删除部分属性，使其变为二范式。（注意如果点击删除了该按钮无法撤销操作；第二个模型表示高中课堂，不存在一个老师教不同课程，也不存在同一个课程名不同老师不同教材）</text>
+    <view style="height:78vh">
+      <view class="grid">
+        <view class="choose">
+          <button class="chooseb" hidden="{{s11}}" bindtap="c11">书名</button>
+          <button class="chooseb" hidden="{{s12}}" bindtap="c12">出版社</button>
+          <button class="chooseb" hidden="{{s13}}" bindtap="c13">作者</button>
+          <button class="chooseb" hidden="{{s14}}" bindtap="c14">借阅时间</button>
+          <button class="chooseb" hidden="{{s15}}" bindtap="c15">版号</button>
+          <button class="chooseb" hidden="{{s16}}" bindtap="c16">复本数</button>
+        </view>
+      </view>
+      <view class="space" />
+      <view class="grid">
+        <view class="choose">
+          <button class="chooseb" hidden="{{s21}}" bindtap="c21">学生</button>
+          <button class="chooseb" hidden="{{s22}}" bindtap="c22">学生学院</button>
+          <button class="chooseb" hidden="{{s23}}" bindtap="c23">课程名</button>
+          <button class="chooseb" hidden="{{s24}}" bindtap="c24">授课教室</button>
+          <button class="chooseb" hidden="{{s25}}" bindtap="c25">任课老师</button>
+          <button class="chooseb" hidden="{{s26}}" bindtap="c26">教材</button>
+          <button class="chooseb" hidden="{{s27}}" bindtap="c27">老师职位</button>
+          <button class="chooseb" hidden="{{s28}}" bindtap="c28">上课时间</button>
+        </view>
+      </view>
+      <view class="space" />
+      <view class="grid">
+        <view class="choose">
+          <button class="chooseb" hidden="{{s31}}" bindtap="c31">出发地</button>
+          <button class="chooseb" hidden="{{s32}}" bindtap="c32">身份证号</button>
+          <button class="chooseb" hidden="{{s33}}" bindtap="c33">乘客名</button>
+          <button class="chooseb" hidden="{{s34}}" bindtap="c34">航空公司名</button>
+          <button class="chooseb" hidden="{{s35}}" bindtap="c35">座位号</button>
+          <button class="chooseb" hidden="{{s36}}" bindtap="c36">乘坐时间</button>
+          <button class="chooseb" hidden="{{s37}}" bindtap="c37">候机口编号</button>
+          <button class="chooseb" hidden="{{s38}}" bindtap="c38">当天天气</button>
+          <button class="chooseb" hidden="{{s39}}" bindtap="c39">目的地</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>
+

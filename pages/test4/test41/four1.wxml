@@ -1,0 +1,51 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">在现实世界中，事物内部与事物之间是有联系的，两个实体之间的联系有三种，请将下面的可移动的方块移动到对应的联系的方框上。</text>
+    <view class="test">
+      <movable-area>
+        <movable-view class="obj" x="0" y="{{clientHeight/4}}">1:1
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/2.5}}">1:n
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/20*11}}">m:n
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t10">
+          商品与生产商
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t9">
+          商品与存放地址
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t8">
+          商品编号与商品
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t7">
+          学生与老师
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t6">
+          老师与课程
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t5">
+          国家与总统
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t4">
+          班级与学校
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t3">
+          姓名与身份证号
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t2">
+          学生与课程
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t1">
+          班级与班长
+        </movable-view>
+      </movable-area>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">返回</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

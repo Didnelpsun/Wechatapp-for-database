@@ -1,0 +1,53 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:6vh; justify-content:space-between">下面是一些绿色的可移动滑方块，上面是一些属性的域，请将正确的域放到方框中。</text>
+    <view class="test">
+      <movable-area>
+      <movable-view class="obj" x="0" y="{{clientHeight/2.5}}">关系
+          </movable-view>
+          <movable-view direction="all" style="width:60vw;" bindchange="touch" id="v12">
+            <text>一个表的主键的个数∈N*</text>
+          </movable-view>
+          <movable-view direction="all" style="width:40vw;" bindchange="touch" id="v11">
+            <text>颜色∈(红色，绿色)</text>
+          </movable-view>
+          <movable-view direction="all" style="width:40vw;" bindchange="touch" id="v10">
+            <text>身份证号长度=18</text>
+          </movable-view>
+          <movable-view direction="all" style="width:40vw;" bindchange="touch" id="v9">
+            <text>开关状态∈(开,关)</text>
+          </movable-view>
+          <movable-view direction="all" style="width:30vw;" bindchange="touch" id="v8">
+            <text>供应量∈R+</text>
+          </movable-view>
+          <movable-view direction="all" style="width:25vw;" bindchange="touch" id="v7">
+            <text>工资∈R+</text>
+          </movable-view>
+          <movable-view direction="all" style="width:35vw;" bindchange="touch" id="v6">
+            <text>年级=2018</text>
+          </movable-view>
+          <movable-view direction="all" style="width:40vw;" bindchange="touch" id="v5">
+            <text>单价∈(20,60)</text>
+          </movable-view>
+          <movable-view direction="all" style="width:35vw;" bindchange="touch" id="v4">
+            <text>产地=武汉</text>
+          </movable-view>
+          <movable-view direction="all" style="width:40vw;" bindchange="touch" id="v3">
+            <text>人名长度∈R+</text>
+          </movable-view>
+          <movable-view direction="all" style="width:20vw;" bindchange="touch" id="v2">
+            <text>年龄∈R+</text>
+          </movable-view>
+          <movable-view direction="all" style="width:40vw;" bindchange="touch" id="v1">
+            <text>商品名长度∈N*</text>
+          </movable-view>
+      </movable-area>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

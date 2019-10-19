@@ -1,0 +1,24 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; width:96vw; height:9vh">点击删除不是一范式的关系表，保留是一范式的关系表（一对中括号代表一个关系表，一个属性以逗号分隔，注意如果点击删除了该按钮无法撤销操作，且注意每个属性的语文含义和属性构成）。</text>
+    <view class="buttonchoose">
+      <button class="choose" style="width:100vw;" hidden="{{statu1}}" bindtap="change1">
+      [武汉市洪山区珞喻路，武汉市武昌区解放路，北京市海淀区颐园路]</button>
+      <button class="choose" style="width:48vw;" hidden="{{statu2}}" bindtap="change2">[绿色，红色，紫色，蓝色]</button>
+      <button class="choose" style="width:55vw;" hidden="{{statu3}}" bindtap="change3">[课程号，课程名，开设学院]</button>
+      <button class="choose" style="width:80vw;" hidden="{{statu4}}" bindtap="change4">[学生名，学号，生日，性别，单门成绩，平均学分绩]</button>
+      <button class="choose" style="width:60vw;" hidden="{{statu5}}" bindtap="change5">[RGB三个原色，CMYK四个原色]</button>
+      <button class="choose" style="width:60vw;" hidden="{{statu6}}" bindtap="change6">[语文，数学，英语，物理，地理]</button>
+      <button class="choose" style="width:62vw;" hidden="{{statu7}}" bindtap="change7">[QQ号，微信号，[手机,座机号码]]</button>
+      <button class="choose" style="width:20vw;" hidden="{{statu8}}" bindtap="change8">[A,B,C,D]</button>
+      <button class="choose" style="width:70vw;" hidden="{{statu9}}" bindtap="change9">[C,C Primer Plus,JAVA,[HMTL,CSS]]</button>
+      <button class="choose" style="width:50vw;" hidden="{{statu10}}" bindtap="change10">[周，李，张，章，孙，刘]</button>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

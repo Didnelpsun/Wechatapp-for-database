@@ -1,0 +1,49 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">有一个表Student包含着学生的信息，Sno是学号，Sname是学生姓名，Sage是学生出生年份。请将包含SQL语句的可移动方块移动到对应的含义的方框中。</text>
+    <view class="test"> 
+      <movable-area>
+        <movable-view class="obj" x="0" y="{{clientHeight/8}}">计算一列值的平均值 <!--4-->
+        </movable-view>
+        <movable-view class="obj" x="{{clientWidth*8/15}}" y="{{clientHeight/8}}">计算一列值的最大值 <!--5-->
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/4}}">统计元组个数 <!--1-->
+        </movable-view>
+        <movable-view class="obj" x="{{clientWidth*8/15}}" y="{{clientHeight/4}}">计算一列值的总和 <!--3-->
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/8*3}}">就算一列值的最小值 <!--6-->
+        </movable-view>
+        <movable-view class="obj" x="{{clientWidth*8/15}}" y="{{clientHeight/8*3}}">统计一列值的个数 <!--2-->
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t6">
+      MIN([DISTINCT|ALL] COL)
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t5">
+      MAX([DISTINCT|ALL] COL)
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t4">
+      AVG([DISTINCT|ALL] COL)
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t3">
+      SUM([DISTINCT|ALL] COL)
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t2">
+      COUNT([DISTINCT|ALL] COL)
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t1">
+      COUNT(*)
+        </movable-view>
+      </movable-area>
+      <text style="font-size:3vw;">上一关的表中，在Book表中查找最大的复本序号大于3的书本名与书本编号并以书名分组。(使用HAVING子句)</text>
+      <view style="height:3vh;"></view>
+      <textarea placeholder="请注意开头结尾不能空格,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" focus="true"></textarea>
+    </view>
+  </view>
+  <text wx:if="{{statu}}" style="color:#c5b102;font-size:3.5vw;width:96vw;">答案：\n拖动1=>3，2=>6，3=>4，4=>1，5=>2，6=>5\n填空：\nSELECT Bname,Bno\nFROM Book\nGROUP BY Bname\nHAVING MAX(Cno)>3;</text>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

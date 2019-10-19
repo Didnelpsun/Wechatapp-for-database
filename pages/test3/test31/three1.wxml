@@ -1,0 +1,43 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">请根据各个术语的定义进行填写。</text>
+    <view class="test">
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        一个关系对应一个<text class="wspace"></text><input maxlength="1" type="text" style="border:0.5px solid #05b686; width:6vw;" bindblur="b1"/><text class="an" wx:if="{{statu}}">表</text>
+      </view>
+      <view class="hspace"></view>
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        表中的一<text class="wspace"></text><input maxlength="1" type="text" style="border:0.5px solid #05b686; width:6vw;" bindblur="b2"/><text class="wspace"></text><text class="an" wx:if="{{statu}}">行</text>即为一个元组
+      </view>
+      <view class="hspace"></view>
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        表中的一<text class="wspace"></text><input maxlength="1" type="text" style="border:0.5px solid #05b686; width:6vw;" bindblur="b3"/><text class="wspace"></text><text class="an" wx:if="{{statu}}">列</text>即为一个属性
+      </view>
+      <view class="hspace"></view>
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        码可以唯一确定一个<text class="wspace"></text><input maxlength="2" type="text" style="border:0.5px solid #05b686; width:10vw;" bindblur="b4"/><text class="an" wx:if="{{statu}}">元组</text>
+      </view>
+      <view class="hspace"></view>
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        域是一组具有相同数据类型的值的<text class="wspace"></text><input maxlength="2" type="text" style="border:0.5px solid #05b686; width:10vw;" bindblur="b5"/><text class="an" wx:if="{{statu}}">集合</text>
+      </view>
+      <view class="hspace"></view>
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        分量是<text class="wspace"></text><input maxlength="2" type="text" style="border:0.5px solid #05b686; width:10vw;" bindblur="b6"/><text class="wspace"></text><text class="an" wx:if="{{statu}}">元组</text>中的一个<text class="wspace"></text><input maxlength="3" type="text" style="border:0.5px solid #05b686; width:16vw;" bindblur="b7"/><text class="an" wx:if="{{statu}}">属性</text>
+      </view>
+      <view class="hspace"></view>
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        关系模式是对关系的描述，一般表示为<text class="wspace"></text><input maxlength="3" type="text" style="border:0.5px solid #05b686; width:16vw;" bindblur="b8"/><text class="an" wx:if="{{statu}}">关系名</text>（ 属性名列表）。
+      </view>
+      <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        关系模型要求关系必须是规范化的，关系的每一个分量必须是一个不可分的数据项，即表中不可再有表。
+      </view>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">返回</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

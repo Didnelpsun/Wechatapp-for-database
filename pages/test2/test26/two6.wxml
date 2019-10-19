@@ -1,0 +1,100 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:10vh;">现在有一个学生表Student，包括Sname学生姓名、Ssex学生性别、Sage学生年龄、Sdept学生院系，下面是一个不完整的查询语句，请根据不同的谓词选择不同的查询结果。填写字母请按顺序且前后不应有空格。</text>
+    <view style="hspace"></view>
+    <view style="flex-direction:row; font-size:3.5vw; border:0.5px solid #888">
+      <view style="width:10vw;">
+        <text>序号\nA\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\nL\nM\nN\nO\nP\nQ\nR\nS\nT\nU</text>
+      </view>
+      <view style="width:25vw;">
+        <text>Sname\n李丹\n刘晨旭\n瞿宇\n黄兵\n蔡兴\n陈亮\n秦璐\n黄富贵\n兰孜炘\n周婉茹\n王纯丽\n苏文\n孙笑\n刘广绪\n徐颖\n雷雯\n章依\n张玲\n金子溪\n吴人龙\n杨泰亮</text>
+      </view>
+      <view style="width:20vw;">
+        <text>Ssex\n女\n男\n男\n男\n男\n男\n女\n男\n女\n女\n女\n女\n男\n男\n女\n女\n女\n女\n女\n男\n男</text>
+      </view>
+      <view style="width:15vw;">
+        <text>Sage\n16\n17\n19\n18\n20\n17\n17\n19\n19\n18\n16\n18\n20\n16\n17\n18\n19\n18\n19\n18\n20</text>
+      </view>
+      <view style="width:25vw;">
+        <text>Sdept\n文学\n计算机\n数统\n城环\n音乐\n外语\n经管\n信管\n计算机\n信技\n生科\n化学\n公管\n物理\n社会\n文学\n数统\n历史\n马克思\n郑国\n大数据</text>
+      </view>
+    </view>
+    <view class="hspace"></view>
+    <text>SELECT Sname,Sage\nFROM Student\nWHERE Sage <text style="color:#c5b102">谓词</text>(SELECT Sage\nFROM Student\nWHERE Sdept='计算机')\nAND Sdept !='计算机'</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{xiaoyu}}ANY（事例）：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" placeholder="ADFGJKLNOPRT" disabled="true"></input>
+    </view>
+    <view class="hspace" wx:if="{{statu}}"></view>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{xiaoyu}}ALL：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="1"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：AKN</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{xiaoyu}}=ANY：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="2"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：ACDFGHJKLNOPQRST</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{xiaoyu}}=ALL：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="3"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：AFGKNO</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{dayu}}ANY：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="4"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：CDEHJLMPQRSTU</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{dayu}}ALL：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="5"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：EMU</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{dayu}}=ANY：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="6"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：CDEFGHJLMOPQRSTU</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>{{dayu}}=ALL：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="7"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：CEHMQSU</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>!=ANY：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="8"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：ACDEFGHJKLMNOPQRSTU</text>
+    <view class="hspace"></view>
+    <view style="flex-direction:row">
+      <text>!=ALL：　　</text>
+      <input maxlength="20" type="text" style="border:0.5px solid #c5b102; width:50vw;" bindblur="inputCheck" id="9"></input>
+    </view>
+    <view class="hspace"></view>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:80vw;">答案：ADEJKLMNPRTU</text>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">完成</button>
+  </view>
+</view>

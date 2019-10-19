@@ -1,0 +1,45 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">有一个表Student包含着学生的信息，Sno是学号，Sname是学生姓名，Sage是学生出生年份。请将包含SQL语句的可移动方块移动到对应的含义的方框中。</text> <!--6 2 1 4 3 5-->
+    <view class="test"> 
+      <movable-area>
+        <movable-view class="obj" x="0" y="{{clientHeight/4}}">在表中选出学号与学生姓名
+        </movable-view>
+        <movable-view class="obj" x="{{clientWidth*0.6}}" y="{{clientHeight/4}}">选出学生姓名与年龄
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/2.5}}">表中选出所有学生姓名并全部小写
+        </movable-view>
+        <movable-view class="obj" x="{{clientWidth*0.6}}" y="{{clientHeight/2.5}}">选出学号并以XUEHAO为别名
+        </movable-view>
+        <movable-view class="obj" x="0" y="{{clientHeight/20*11}}">在表中选出学生姓名与学号
+        </movable-view>
+        <movable-view class="obj" x="{{clientWidth*0.6}}" y="{{clientHeight/20*11}}">选出表中所有数据
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t6">
+      SELECT Sno,Sname;\nFROM Student;
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t5">
+      SELECT *;\nFROM Student;
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t4">
+      SELECT Sno XUEHAO;\nFROM Student;
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t3">
+      SELECT Sname,Sno;\nFROM Student;
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t2">
+      SELECT Sname,2019-Sage;\nFROM Student;
+        </movable-view>
+        <movable-view class="move" direction="all" bindchange="t1">
+      SELECT LOWER(Sname);\nFROM Student;
+        </movable-view>
+      </movable-area>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

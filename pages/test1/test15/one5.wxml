@@ -1,0 +1,41 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; width:94vw; height:3vh">请选出是三范式的数据库模型。</text>
+    <view style="height:80vh">
+      <checkbox-group bindchange="checkboxChange" style="height:3vh">
+        <text style="font-size:5vw">1</text>
+        <checkbox color="red" value="1"/>
+        <text style="font-size:5vw">2</text>
+        <checkbox color="red" value="10"/>
+        <text style="font-size:5vw">3</text>
+        <checkbox color="red" value="1"/>
+        <text style="font-size:5vw">4</text>
+        <checkbox color="red" value="10"/>
+        <text style="font-size:5vw">5</text>
+        <checkbox color="red" value="10"/>
+        <text style="font-size:5vw">6</text>
+        <checkbox color="red" value="10"/>
+        <text style="font-size:5vw">7</text>
+        <checkbox color="red" value="1"/>
+        <text style="font-size:5vw">8</text>
+        <checkbox color="red" value="1"/>
+      </checkbox-group>
+      <view style="height:65vh; font-size:3.5vw">
+        <text style="color:red">1:任课老师，学生名，任课地址，教师职位</text>
+        <text style="color:red">2:书名，出版社，作者，版次，复本数</text>
+        <text style="color:red">3:员工名，员工号，公司名，公司地址，当月工资</text>
+        <text style="color:red">4:乘客名，乘坐时间，乘坐航班名，航空公司名</text>
+        <text style="color:red">5:姓名，生日，性别，户籍所在地</text>
+        <text style="color:red">6:商品名，上月购买人数，产地，生产商</text>
+        <text style="color:red">7:仓库名，仓库地址，管理员名，管理员联系方式</text>
+        <text style="color:red">8:货物名，单价，进价，地租</text>
+      </view>
+    </view>
+  </view>
+  <text style="height:5vh; font-size:5vw;">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next" >下一关</button>
+  </view>
+</view>

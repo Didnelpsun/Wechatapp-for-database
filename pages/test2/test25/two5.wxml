@@ -1,0 +1,20 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:15vh;">以下有三个表：\n①产品详情表 Product 品牌编号pid 品牌名pname 价格price 产品类型编号tid 产地place \n②产品类型表 ProType 产品类型编号tid 产品类型type 是否加税 istax \n③订单表 Order 订购者姓名uname 订购者手机号utel 选购品牌名oname\n</text>
+    <view style="hspace"></view>
+    <text>现在想使用SQL语言将三个表合并为一个表，在下面的选项中勾选正确的SQL语句使其能合并使完成要求。</text>
+    <text>SELECT uname,utel,oname,tid,type,istax,pid,price,place\n</text>
+    <view style="height:4vh;"></view>
+    <checkbox-group bindchange="checkboxChange" id="{{items.id}}">
+  <label class="checkbox" wx:for="{{items}}">
+    {{item.value}}<checkbox value="{{item.name}}" style="width:96vw;" color="#c5b102"/>
+  </label>
+</checkbox-group>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

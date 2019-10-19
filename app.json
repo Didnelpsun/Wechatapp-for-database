@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/menu/menu",
+    "pages/test1/one",
+    "pages/test2/two",
+    "pages/test3/three",
+    "pages/test4/four",
+    "pages/test5/five",
+    "pages/message/message",
+    "pages/test1/test11/one1",
+    "pages/test1/test12/one2",
+    "pages/test1/test13/one3",
+    "pages/test1/test14/one4",
+    "pages/test1/test15/one5",
+    "pages/test1/test16/one6",
+    "pages/test1/test17/one7",
+    "pages/test1/test18/one8",
+    "pages/test2/test21/two1",
+    "pages/test2/test22/two2",
+    "pages/test2/test23/two3",
+    "pages/test2/test24/two4",
+    "pages/test2/test25/two5",
+    "pages/test2/test26/two6",
+    "pages/test3/test31/three1",
+    "pages/test3/test32/three2",
+    "pages/test3/test33/three3",
+    "pages/test3/test34/three4",
+    "pages/test4/test41/four1",
+    "pages/test4/test42/four2",
+    "pages/test4/test43/four3",
+    "pages/test5/test51/five1",
+    "pages/test5/test52/five2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "数据库系统原理游戏",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/home1.jpg",
+        "selectedIconPath": "./images/home.jpg"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "测试",
+        "iconPath": "./images/book1.jpg",
+        "selectedIconPath": "./images/book.jpg"
+      }
+    ],
+    "selectedColor": "#03d1de",
+    "color": "#888",
+    "borderStyle": "white"
+  },
+  "debug": false
+}

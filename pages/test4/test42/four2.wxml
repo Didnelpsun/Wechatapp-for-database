@@ -1,0 +1,85 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">请根据所学填写。</text>
+    <view style="flex-direction: row; font-size:3.5vw;">
+      实体型用
+      <input maxlength="2" type="text" style="border:0.5px solid #1108cc; width:7.5vw; font-size:3.5vw;" bindblur="blur" id="1"></input>
+      表示；属性用
+      <input maxlength="3" type="text" style="border:0.5px solid #1108cc; width:10vw; font-size:3.5vw;" bindblur="blur" id="2"></input>
+      表示；联系用
+      <input maxlength="2" type="text" style="border:0.5px solid #1108cc; width:7.5vw; font-size:3.5vw;" bindblur="blur" id="3"></input>
+      表示。
+    </view>
+    <text wx:if="{{statu}}" style="width:94vw;color:#1108cc; font-size:3.5vw;">答案：矩形、椭圆形、菱形</text>
+    <image src="../../../images/er1.png" style="width:100vw; height:65vw;"></image>
+    <text style="font-size:5vw;">图一</text>
+    <image src="../../../images/er2.png" style="width:100vw; height:55vw;"></image>
+    <text style="font-size:5vw;">图二</text>
+    <image src="../../../images/er3.png" style="width:100vw; height:60vw;"></image>
+    <text style="font-size:5vw;">图三</text>
+    <view style="height:3vh;"></view>
+    <text>请根据ER图选择各个实体之间的联系的类型</text>
+    <view style="height:3vh;"></view>
+    <text>图一中12的关系：</text>
+    <radio-group class="radio-group" bindchange="radioChange" color="#1108cc" id="4">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" color="#1108cc" />{{item.value}}
+      </label>
+        <radio color="#1108cc" checked="true" wx:if="{{statu}}"/>M:N
+    </radio-group>
+    <view style="height:3vh;"></view>
+    <text>图一中34的关系：</text>
+    <radio-group class="radio-group" bindchange="radioChange" color="#1108cc" id="5">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" color="#1108cc" />{{item.value}}
+      </label>
+        <radio color="#1108cc" checked="true" wx:if="{{statu}}"/>1:N
+    </radio-group>
+    <view style="height:3vh;"></view>
+    <text>图二中12的关系：</text>
+    <radio-group class="radio-group" bindchange="radioChange" color="#1108cc" id="6">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" color="#1108cc" />{{item.value}}
+      </label>
+      <radio color="#1108cc" checked="true" wx:if="{{statu}}"/>1:1
+    </radio-group>
+    <view style="height:3vh;"></view>
+    <text>图二中34的关系：</text>
+    <radio-group class="radio-group" bindchange="radioChange" color="#1108cc" id="7">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" color="#1108cc" />{{item.value}}
+      </label>
+      <radio color="#1108cc" checked="true" wx:if="{{statu}}"/>1:N
+    </radio-group>
+    <view style="height:3vh;"></view>
+    <text>图二中56的关系：</text>
+    <radio-group class="radio-group" bindchange="radioChange" color="#1108cc" id="8">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" color="#1108cc" />{{item.value}}
+      </label>
+      <radio color="#1108cc" checked="true" wx:if="{{statu}}"/>M:N
+    </radio-group>
+    <view style="height:3vh;"></view>
+    <text>图三中12的关系：</text>
+    <radio-group class="radio-group" bindchange="radioChange" color="#1108cc" id="9">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" color="#1108cc" />{{item.value}}
+      </label>
+      <radio color="#1108cc" checked="true" wx:if="{{statu}}"/>1:N
+    </radio-group>
+    <view style="height:3vh;"></view>
+    <text>图三中34的关系：</text>
+    <radio-group class="radio-group" bindchange="radioChange" color="#1108cc" id="10">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" color="#1108cc" />{{item.value}}
+      </label>
+      <radio color="#1108cc" checked="true" wx:if="{{statu}}"/>M:N
+    </radio-group>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

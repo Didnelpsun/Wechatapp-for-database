@@ -1,0 +1,12 @@
+/* pages/message/message.wxss */
+view{
+  width: 100vw;
+  height:100vh;
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1563718100&di=7b9461d304e255dde8fc344905366ec9&src=http://imgq.duitang.com/uploads/blog/201505/06/20150506211516_VvZmF.jpeg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

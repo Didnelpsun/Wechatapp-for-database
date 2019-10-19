@@ -1,0 +1,19 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; width:96vw; height:9vh">　　第四范式是有关于多值关系的范式，虽然接触不多，但是还是需要了解。第四范式的应用范围比较小，因为只有在某些特殊情况下，要考虑将表规范到第四范式。所以在实际应用中，一般不要求表满足第四范式。</text>
+    <view style="font-size:5vw; width:94vw; height:78vh">
+    <view style="display:flex; flex-direction:row; flex-wrap:wrap;">
+        4NF就是限制关系模式的属性间不允许有<input maxlength="3" type="text" style="border:0.5px solid #d80404; width:20vw;" bindblur="b1"/>且<input maxlength="5" type="text" style="border:0.5px solid #d80404; width:30vw;" bindblur="b2"/>的<input maxlength="4" type="text" style="border:0.5px solid #d80404; width:25vw;" bindblur="b3"/>
+      </view>
+      <text wx:if="{{statu}}" style="color:#d80404;width:96vw;">答案：非平凡、非函数依赖、多值依赖</text>
+      <text>　　一个表中存在三个数据：“课程、学生、先修课”。假设2018级的计算机专业学生想要学习JAVA课程，那么他们需要先学习VB、C#、BS三门课，才可以选择进行JAVA课程。存在关系：课程→学生，课程→先修课。两个均是1：N的关系，当出现在一张表的时候，会出现大量的冗余。所以就我们需要分解它，减少冗余。</text>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">完成</button>
+  </view>
+</view>
+

@@ -1,0 +1,84 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:5vh;">请根据所学填写。</text>
+    <text>从E-R模型向关系模式转换时，一个m:n联系转换为关系模式时，该关系的码是</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="1">
+      <label class="radio" wx:for="{{items1}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <text>E-R图中的联系可以与___实体有关。</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="2">
+      <label class="radio" wx:for="{{items2}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <text>如果两个实体间的联系是m:n,则___引入第三个交叉关系。</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="3">
+      <label class="radio" wx:for="{{items3}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <text>从E-R图导出关系模式时，如果两实体间的联系是m:n，下列说法中正确的是</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="4">
+      <label class="radio" wx:for="{{items4}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <text>若两个实体之间的联系是1:m，则实现1:m联系的方法是</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="5">
+      <label class="radio" wx:for="{{items5}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <text>在数据库逻辑结构设计中，将E-R模型转换为关系模型应遵循相应原则。对于三个不同实体集和它们之间的一一个多对多联系，最少应转换为____个 关系模式。</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="6">
+      <label class="radio" wx:for="{{items6}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <text>下面有关E-R模型向关系模型转换的叙述中，不正确的是</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="7">
+      <label class="radio" wx:for="{{items7}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <text>在数据库逻辑设计中，当将E-R图转换为关系模式时，下面的做法中，不正确的是</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="8">
+      <label class="radio" wx:for="{{items7}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+    <view style="height:8vh;"></view>
+    <image src="../../../images/biao.png" style="width:100vw; height:35vw;"></image>
+    <view style="height:1vh;"></view>
+    <text>如图所示的E-R图转换成关系模型，一般可转换成______个关系模式。</text>
+    <view style="height:1vh;"></view>
+    <radio-group class="radio-group" bindchange="radioChange" id="9">
+      <label class="radio" wx:for="{{items7}}">
+        <radio value="{{item.name}}" color="#7e0eb2" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">完成</button>
+  </view>
+</view>

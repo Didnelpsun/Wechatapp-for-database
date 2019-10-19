@@ -1,2 +1,2 @@
-# Wechatapp-for-database
-制作开始于2019年7月，完成于8月，使用了HTML，CSS，JavaScript。无后端。
+# -
+2019年暑假为信息管理学院陈菁华老师制作的微信小程序（使用html，css，JavaScript，无后端）

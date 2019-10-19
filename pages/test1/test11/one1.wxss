@@ -1,0 +1,66 @@
+view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  width: 100vw;
+  height: 100vh;
+}
+.body{
+  height: 87vh;
+  width: 100vw;
+  color: white;
+}
+.sq1{
+  width: 80vw;
+  height: 80vh;
+  background-color: red;
+}
+.sq2{
+  width: 70vw;
+  height: 70vh;
+  background-color: orange;
+}
+.sq3{
+  width: 60vw;
+  height: 60vh;
+  background-color: yellow;
+}
+.sq4{
+  width: 50vw;
+  height: 50vh;
+  background-color: green;
+}
+.sq5{
+  width: 40vw;
+  height: 40vh;
+  background-color: blue;
+}
+.sq6{
+  width: 30vw;
+  height: 30vh;
+  background-color: purple;
+}
+.sq7{
+  width: 20vw;
+  height: 20vh;
+  background-color: purple;
+}
+input{
+  font-size:5vw;
+}
+.button{
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+button{
+  height: 5vh;
+  width: 25vw;
+  font-size: 3vw;
+  background-color: green;
+  color: white;
+}

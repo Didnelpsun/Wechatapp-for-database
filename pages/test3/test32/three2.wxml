@@ -1,0 +1,68 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:3vh;">下面是可移动方块，上面是关于关系模型的数据，请放到对应的术语下。</text>
+    <text style="font-size:3.5vw; color:black; width:96vw;height:17vh;">①：学生选课表 ②：年龄∈(0,150) ③：2018212603 ④：数据库系统概论 ⑤：学生信息表 ⑥：2018212603 黄富贵 男 19 数据库系统概论 ⑦：年龄 19 18 17 19 16 ⑧：名字长度∈[2,4] ⑨：学生信息(姓名，学号，性别，年龄) ⑩：(学号，课程号)  ⑪：课程信息(课程名，课程号，授课老师) ⑫：年级：2018 2018 2018（成功方块会消失）</text>
+    <view class="test">
+      <movable-area>
+        <view style="height:50vh; width:100vw;">
+          <movable-view class="obj" x="{{clientWidth/6}}" y="{{clientHeight/4}}">关系
+          </movable-view>
+          <movable-view class="obj" x="{{clientWidth/3}}" y="{{clientHeight/4}}">元组
+          </movable-view>
+          <movable-view class="obj" x="{{clientWidth/2}}" y="{{clientHeight/4}}">属性
+          </movable-view>
+          <movable-view class="obj" x="{{clientWidth/3*2}}" y="{{clientHeight/4}}">码
+          </movable-view>
+          <movable-view class="obj" x="{{clientWidth/5}}" y="{{clientHeight/2.5}}">域
+          </movable-view>
+          <movable-view class="obj" x="{{clientWidth/5*2}}" y="{{clientHeight/2.5}}">分量
+          </movable-view>
+          <movable-view class="obj" x="{{clientWidth/5*3}}" y="{{clientHeight/2.5}}">关系模式
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t12" hidden="{{s12}}">
+            <text>12</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t11" hidden="{{s11}}">
+            <text>11</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t10" hidden="{{s10}}">
+            <text>10</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t9" hidden="{{s9}}">
+            <text>9</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t8" hidden="{{s8}}">
+            <text>8</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t7" hidden="{{s7}}">
+            <text>7</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t6" hidden="{{s6}}">
+            <text>6</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t5" hidden="{{s5}}">
+            <text>5</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t4" hidden="{{s4}}">
+            <text>4</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t3" hidden="{{s3}}">
+            <text>3</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t2" hidden="{{s2}}">
+            <text>2</text>
+          </movable-view>
+          <movable-view class="move" direction="all" bindchange="t1" hidden="{{s1}}">
+            <text>1</text>
+          </movable-view>
+        </view>
+      </movable-area>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

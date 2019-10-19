@@ -1,0 +1,36 @@
+.main{
+  width: 100vw;
+  height: 100vh;
+  font-size: 4vw;
+  line-height: 6vw;
+}
+swiper{
+  width: 100vw;
+  height: 85vh
+}
+.swiper{
+  width: 100vw;
+  height: 85vh;
+  background-image: url("https://hbimg.huabanimg.com/9caed59f4efa0c4fe7062425194f9b6743cb067b632f13-IJVV4Y_fw658");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.descri{
+  width: 86vw;
+  height: 76vh;
+  font-size: 4.5vw;
+}
+picker{
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.picker{
+  font-size: 5vw;
+}

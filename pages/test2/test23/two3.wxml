@@ -1,0 +1,52 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:7vh;">现在有一个图书馆藏书表Book，数据有书名Bname，书本编号Bno，复本编号Cno，书本类型Btype，出版社Bpub，作者Bauth，评分Bgrade。一个汉字对应一个字符。请使用SQL语言完成下列要求。\n</text>
+    <view class="hspace"></view>
+    <text>从Book表中查询书名与评分，并按评分降序排列：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="1" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Bname,Bgrade\nFROM Book\nORDER BY Bgrade DESC;</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找评分高于90的书名：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="2" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Bname\nFROM Book\nWHERE Bgrade>90;</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找评分，并消除重复：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="3" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT DISTINCT Bgrade\nFROM Book;</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找评分在60，80的范围的书名：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="4" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Bname\nFROM Book\nWHERE Bgrade BETWEEN 60 AND 80;</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找书本类型是TEC的并且作者在Rose、Jack、Mark范围中的书名：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="5" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Bname\nFROM Book\nWHERE Btype='TEC' AND Bauth IN ('Rose','Jack','Mark');</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找复本编号不为空的并且出版社为华中师范大学的书本评分：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="6" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Bgrade\nFROM Book\nWHERE Bgrade IS NOT NULL AND Bpub='华中师范大学';</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找书名为数据库系统概论或者作者为王珊的复本编号：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="7" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Cno\nFROM Book\nWHERE Bname='数据库系统概论' OR Bauth='王珊';</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找书名中含有数据库的书名：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="8" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Bname\nFROM Book\nWHERE Bname LIKE '%数据库%';</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找作者姓刘且名字为三个字的书本编号：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="9" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102;width:96vw;">答案：\nSELECT Bno\nFROM Book\nWHERE Bauth LIKE '刘__';</text>
+    <view class="hspace"></view>
+    <text>在Book表中查找书名中含有%的书本编号：</text>
+    <textarea placeholder="请注意开头结尾不能空格，标点符号一般紧跟关键字等,编写按照题目所给顺序。" style="border:0.5px solid #c5b102; font-size:3.5vw; width:100vw;height:10vh;" bindblur="change" id="10" focus="true"></textarea>
+    <text wx:if="{{statu}}" style="color:#c5b102 ;width:96vw;">答案：\nSELECT Bno\nFROM Book\nWHERE Bname LIKE '%\\%%' ESCAPE '\\';</text>
+  </view>
+  <view class="hspace"></view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

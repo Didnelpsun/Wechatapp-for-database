@@ -1,0 +1,10 @@
+<view>
+  <text>{{year}}年{{month}}月{{day}}日{{hour}}时{{minutue}}分{{second}}秒</text>
+  <text>{{username}}同学</text>
+  <text>{{getApp().globalData.username}}</text>
+  <text>关系模型术语：{{message1}}</text>
+  <text>SQL语言：{{message2}}</text>
+  <text>关系规范化：{{message3}}</text>
+  <text>概念结构设计：{{message4}}</text>
+  <text>逻辑结构设计：{{message5}}</text>
+</view>

@@ -1,0 +1,58 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; width:96vw; height:9vh">下面是一些数据库的关系模型，请从中找出符合二范式的模型，请点击对应按钮选择。</text>
+    <view style="height:78vh">
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color1}}" bindtap="change1">1</button>
+        <text class="itemword">[姓名，性别，生日，毕业高中，就读大学]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color2}}" bindtap="change2">2</button>
+        <text class="itemword">[书名，出版社，作者，出版时间，借阅时间]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color3}}" bindtap="change3">3</button>
+        <text class="itemword">[姓名，手机号，QQ号，微信号，邮箱地址]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color4}}" bindtap="change4">4</button>
+        <text class="itemword">[学生，课程，老师，老师职位，教材]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color5}}" bindtap="change5">5</button>
+        <text class="itemword">[学院名，学院编号，该学院18级学生的姓名]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color6}}" bindtap="change6">6</button>
+        <text class="itemword">[彩虹的颜色，红色，蓝色，黄色，绿色]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color7}}" bindtap="change7">7</button>
+        <text class="itemword">[外卖订单号，联系方式，买主名，骑手名]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color8}}" bindtap="change8">8</button>
+        <text class="itemword">[员工号，员工名，所在公司名，当月工资]</text>
+      </view>
+      <view class="space"/>
+      <view class="item">
+        <button class="itembutton" style="background-color:{{color9}}" bindtap="change9"><text>9</text></button>
+        <text class="itemword">[小程序名，开发者人数，页面数，常用客户数]</text>
+      </view>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>
+

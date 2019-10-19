@@ -1,0 +1,63 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:5vh;">请在下列关系模型选出主码（点击）。</text>
+    <view class="test">
+      <view class="row">
+        <checkbox-group bindchange="checkboxChange" id="1">
+          <label wx:for="{{items1}}">
+            <checkbox value="{{item.name}}" class="cb" />{{item.value}}
+          </label>
+          <div wx:if="{{statu}}" style="color:#05b686">
+          　主码：<checkbox value="{{item.name}}" class="cb" checked="true"/>学号
+          </div>
+        </checkbox-group>
+      </view>
+      <view class="row">
+        <checkbox-group bindchange="checkboxChange" id="2">
+          <label wx:for="{{items2}}">
+            <checkbox value="{{item.name}}" class="cb" />{{item.value}}
+          </label>
+          <div wx:if="{{statu}}" style="color:#05b686">
+          　主码：<checkbox value="{{item.name}}" class="cb" checked="true"/>仓库编号
+          </div>
+        </checkbox-group>
+      </view>
+      <view class="row">
+        <checkbox-group bindchange="checkboxChange" id="3">
+          <label wx:for="{{items3}}">
+            <checkbox value="{{item.name}}" class="cb" />{{item.value}}
+          </label>
+          <div wx:if="{{statu}}" style="color:#05b686">
+          　主码：<checkbox value="{{item.name}}" class="cb" checked="true"/>乘客身份证号
+          </div>
+        </checkbox-group>
+      </view>
+      <view class="row">
+        <checkbox-group bindchange="checkboxChange" id="4">
+          <label wx:for="{{items4}}">
+            <checkbox value="{{item.name}}" class="cb" />{{item.value}}
+          </label>
+          <div wx:if="{{statu}}" style="color:#05b686">
+          　主码：<checkbox value="{{item.name}}" class="cb" checked="true"/>员工名<checkbox value="{{item.name}}" class="cb" checked="true"/>联系方式
+          </div>
+        </checkbox-group>
+      </view>
+      <view class="row">
+        <checkbox-group bindchange="checkboxChange" id="5">
+          <label wx:for="{{items5}}">
+            <checkbox value="{{item.name}}" class="cb" />{{item.value}}
+          </label>
+          <div wx:if="{{statu}}" style="color:#05b686">
+          　主码：<checkbox value="{{item.name}}" class="cb" checked="true"/>书本编号<checkbox value="{{item.name}}" class="cb" checked="true"/>复本编号
+          </div>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">完成</button>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; color:black; width:96vw;height:5vh;">请根据各个范式的类型包含方式进行填写（请按照给的格式）。</text>
+    <view class="sq1">
+      <view>
+      <text>1NF</text>
+      <view class="sq2">
+        <text>2NF</text>
+        <view class="sq3">
+          <input maxlength="3" type="text" style="border:0.5px solid #fff; width:10vw;" bindblur="nf3"></input>
+          <view class="sq4">
+            <input maxlength="4" type="text" style="border:0.5px solid #fff; width:14vw;" bindblur="nfbc"></input>
+            <view class="sq5">
+              <input maxlength="3" type="text" style="border:0.5px solid #fff; width:10vw;" bindblur="nf4"></input>
+              <view class="sq6">
+                <input maxlength="3" type="text" style="border:0.5px solid #fff; width:10vw;" bindblur="nf5"></input>
+                <view class="sq7"></view>
+            </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      </view>
+    </view>
+  </view>
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">返回</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>

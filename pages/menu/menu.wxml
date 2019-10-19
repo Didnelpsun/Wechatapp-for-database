@@ -1,0 +1,27 @@
+<view id="menu">
+  <view class="button"></view>
+  <view style="display:flex; flex-direction:row;">
+    <view class="button"></view>
+    <button bindtap="turnto3">关系模型术语</button>
+  </view>
+  <view class="button"></view>
+  <view style="display:flex; flex-direction:row;">
+    <button bindtap="turnto2">SQL语言</button>
+    <view class="button"></view>
+  </view>
+  <view class="button"></view>
+  <view style="display:flex; flex-direction:row;">
+    <view class="button"></view>
+    <button bindtap="turnto1">关系规范化</button>
+  </view>
+  <view class="button"></view>
+  <view style="display:flex; flex-direction:row;">
+    <button bindtap="turnto4">概念结构设计</button>
+    <view class="button"></view>
+  </view>
+  <view class="button"></view>
+  <view style="display:flex; flex-direction:row;">
+    <view class="button"></view>
+    <button bindtap="turnto5">逻辑结构设计</button>
+  </view>
+</view>

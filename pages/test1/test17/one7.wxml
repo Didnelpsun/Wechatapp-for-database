@@ -1,0 +1,56 @@
+<view class="main">
+  <view class="body">
+    <text style="font-size:3vw; width:96vw; height:11vh">下面是有关BC范式的题目，请填写它们之间的关系（注意！请按照图片表中属性的顺序来填空，颠倒顺序可能不会通过）</text>
+    <view style="font-size:5vw; width:96vw;">
+      <text>　　若一张表的属性包括：“书号、书名、作者”。其中，书号是唯一的，书名允许相同，一个书号对应一本书。一本书的作者可以多个，但是同一个作者所参与编著的书名是不同。如下图所示：</text>
+      <image src="../../../images/table.png" style="width:80vw; height:35vh;"/>
+      <view style="height:3vh"></view>
+      <text style=" width:96vw;">　　存在关系：</text>
+      <view style="height:3vh"></view>
+      <view style="display:flex; flex-direction:row;">
+        (<input maxlength="2" type="text" style="border:0.5px solid #d80404; width:10vw;" bindblur="b11"/>、<input maxlength="2" type="text" style="border:0.5px solid #d80404; width:10vw;" bindblur="b12"/>) ——><input maxlength="2" type="text" style="border:0.5px solid #d80404; width:10vw;" bindblur="b13"/>
+      </view>
+      <view style="height:3vh"></view>
+      <view style="display:flex; flex-direction:row;">
+        <input maxlength="2" type="text" style="border:0.5px solid #d80404; width:10vw;" bindblur="b14"/> ——><input maxlength="2" type="text" style="border:0.5px solid #d80404; width:10vw;" bindblur="b15"/>
+      </view>
+      <view style="height:3vh"></view>
+      <text wx:if="{{statu}}" style="color:#d80404;width:96vw;">答案：书名、作者、书号、书号、书名</text>
+      <view style="height:3vh" wx:if="{{statu}}"></view>
+      <text style=" width:96vw;">　　我们可以把这个表分为两个表，以实现BC范式</text>
+      <view style="height:3vh"></view>
+      <text style=" width:96vw;">　　下面是第二个问题，如下条件：1、某公司有若干的仓库；2、每个仓库只能有一个管理员，一名管理员只能在一个仓库中工作；3、一个仓库中可以存放多种物品，一种物品可以存放在不同的仓库中，每种物品在每个仓库中有对应的数量。已知它是一个三范式的数据库。</text>
+      <image src="../../../images/table1.png" style="width:90vw; height:30vh;"/>
+      <text style=" width:96vw;">　　这个数据库的主属性是：（点击删除非主属性）</text>
+      <view style="height:3vh"></view>
+      <view class="choose">
+        <button class="chooseb" hidden="{{s21}}" bindtap="b21">仓库名</button>
+        <button class="chooseb" hidden="{{s22}}" bindtap="b22">管理员</button>
+        <button class="chooseb" hidden="{{s23}}" bindtap="b23">物品名</button>
+        <button class="chooseb" hidden="{{s24}}" bindtap="b24">数量</button>
+      </view>
+      <text wx:if="{{statu}}" style="color:#d80404;width:96vw;">答案：点击数量</text>
+      <view style="height:3vh"></view>
+      <text style=" width:96vw;">　　若想变为BC范式，就要改为（仓库名，管理员）（仓库名，物品名，数量）这两个表。</text>
+      <view style="height:3vh"></view>
+      <text style=" width:96vw;">　　下面是第三个问题，在关系模型STJ中，S表示学生，T表示教师，J表示课程。请填写其函数依赖（用大写字母）</text>
+      <view style="height:3vh"></view>
+      <image src="../../../images/table2.png" style="width:90vw; height:35vh;"/>
+      <view style="height:3vh"></view>
+      <view style="display:flex; flex-direction:row; justify-content: space-around;">
+        ①<input maxlength="1" type="text" style="border:0.5px solid #d80404; width:6vw;" bindblur="b31"/><view style="width:3vh"></view>②<input maxlength="1" type="text" style="border:0.5px solid #d80404; width:6vw;" bindblur="b32"/><view style="width:3vh"></view>③<input maxlength="1" type="text" style="border:0.5px solid #d80404; width:6vw;" bindblur="b33"/><view style="width:3vh"></view>④<input maxlength="1" type="text" style="border:0.5px solid #d80404; width:6vw;" bindblur="b34"/><view style="width:3vh"></view>⑤<input maxlength="1" type="text" style="border:0.5px solid #d80404; width:6vw;" bindblur="b35"/><view style="width:3vh"></view>⑥<input maxlength="1" type="text" style="border:0.5px solid #d80404; width:6vw;" bindblur="b36"/>
+      </view>
+      <view style="height:3vh"></view>
+      <text wx:if="{{statu}}" style="color:#d80404;width:96vw;">答案：S J T S T J</text>
+      <view style="height:3vh"></view>
+      <text style=" width:96vw;">　　值得一提的是前面几关所刻意备注的是高中课堂，因为高中时候老师与学生以及课程的关系是比较简单的，而到了大学，这种关系无疑会复杂许多。这种关系的主键可以为学号（因为大学很可能会重名）课程号。此主键可以确定所上课程的老师，教材等。一个课程是由不同的老师来授课，一个老师可能会上不同的课程，不同老师的同样的课程会有不同的教材，一个课程号对应不同的课堂号，课程号和学号可以确定课堂号，课程号，课堂号和课堂序号可以确定学号，从而确定学生。如果是课程号和课堂号则可以确定教室地点，这是为了确认教室地点的主键，与大的关系的主键不同，所以需要另建表，等等。这涉及到多个多值依赖，所以3NF已经不足够使这种关系表能被正常维护，就需要使用BCNF。甚至更高的范式。</text>
+    </view>
+  </view> 
+  <text style="height:5vh">{{statu}}</text>
+  <view class="button">
+    <button bindtap="back">上一关</button>
+    <button loading="true" bindtap="check">判断</button>
+    <button bindtap="next">下一关</button>
+  </view>
+</view>
+
